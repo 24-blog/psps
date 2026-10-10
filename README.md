@@ -1,2 +1,5 @@
-# psps
-Professional Shogi Player Training and Admission System
+[![License](https://img.shields.io/github/license/24-blog/psps)](LICENSE)
+
+
+⚠️COPYRIGHT<br>
+All non-code text authored by the repository owner is licensed under CC BY-NC-ND 4.0.
