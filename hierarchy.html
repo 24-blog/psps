@@ -8,19 +8,19 @@
   :root {
     --bg: #ffffff; --fg: #222; --line: #555;
     --meijin: #f6d56b; --a: #fbe7b0; --b1: #d3e6cf; --b2: #a8cf9f;
-    --c1: #c3d4f3; --c2: #8fb8e3; --box: #ffffff; --pink: #fbd9e4;
+    --c1: #c3d4f3; --c2: #8fb8e3; --box: #ffffff; --pink: #fbd9e4; --pbar: #e48fae; --gbar: #e0b43a; --grid: #bbb;
   }
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
       --bg: #17181b; --fg: #eaeaea; --line: #9a9a9a;
       --meijin: #8a6d1c; --a: #8c7436; --b1: #4c6b49; --b2: #3f7a3a;
-      --c1: #3c5688; --c2: #2f679c; --box: #202226; --pink: #7a3a52;
+      --c1: #3c5688; --c2: #2f679c; --box: #202226; --pink: #7a3a52; --pbar: #b5577a; --gbar: #b8902a; --grid: #555;
     }
   }
   :root[data-theme="dark"] {
     --bg: #17181b; --fg: #eaeaea; --line: #9a9a9a;
     --meijin: #8a6d1c; --a: #8c7436; --b1: #4c6b49; --b2: #3f7a3a;
-    --c1: #3c5688; --c2: #2f679c; --box: #202226; --pink: #7a3a52;
+    --c1: #3c5688; --c2: #2f679c; --box: #202226; --pink: #7a3a52; --pbar: #b5577a; --gbar: #b8902a; --grid: #555;
   }
   html, body { height: 100%; margin: 0; }
   body {
@@ -29,7 +29,14 @@
     display: flex; justify-content: center; align-items: flex-start;
     box-sizing: border-box; padding: 16px;
   }
-  svg { width: 100%; max-width: 520px; height: auto; }
+  main { width: 100%; max-width: 565px; }
+  svg { width: 100%; height: auto; display: block; }
+  .sec { margin-top: 28px; }
+  .ct { fill: var(--fg); font-size: 18px; font-weight: 700; }
+  .n { fill: var(--fg); font-size: 13px; text-anchor: middle; }
+  .sm { fill: var(--fg); font-size: 12px; text-anchor: middle; opacity: .75; }
+  .badge { font-size: 11px; font-weight: 700; text-anchor: middle; dominant-baseline: central; }
+  .note { fill: var(--fg); font-size: 11px; opacity: .7; }
   .t { fill: var(--fg); font-size: 22px; text-anchor: middle; dominant-baseline: central; }
   .side { fill: var(--fg); font-size: 22px; writing-mode: vertical-rl; text-anchor: middle; dominant-baseline: central; letter-spacing: .15em; }
   .shape { stroke: var(--line); stroke-width: 1; }
@@ -37,6 +44,7 @@
 </style>
 </head>
 <body>
+<main>
 <svg viewBox="-45 0 565 620" role="img" aria-label="棋士制度の階層図">
   <defs>
     <marker id="ah" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
@@ -78,7 +86,51 @@
 
   <!-- 女流 → フリークラス（編入） -->
   <path class="arrow" d="M50,577 C-40,577 -40,441 48,441" stroke-dasharray="6 5" marker-end="url(#ah)"/>
-  <text class="side" x="-30" y="509" style="font-size:18px;letter-spacing:.1em">白玲</text>
+  <text class="side" x="-30" y="509" style="font-size:18px;letter-spacing:.1em">編入</text>
 </svg>
+<svg class="sec" viewBox="0 0 565 340" role="img" aria-label="三段リーグ成績：勝数の推移">
+<text class="ct" x="12" y="24">三段リーグ成績（勝数／18局）</text>
+<rect x="330" y="12" width="12" height="12" style="fill:var(--gbar)"/><text class="note" x="347" y="22">藤井</text>
+<rect x="395" y="12" width="12" height="12" style="fill:var(--pbar)"/><text class="note" x="412" y="22">西山</text>
+<line x1="45" y1="145.0" x2="555" y2="145.0" stroke="var(--grid)" stroke-dasharray="4 4"/>
+<text class="note" x="41" y="149.0" style="text-anchor:end">9</text>
+<line x1="45" y1="250" x2="555" y2="250" stroke="var(--line)"/>
+<rect x="44.2" y="98.3" width="24" height="151.7" style="fill:var(--gbar)"/>
+<text class="n" x="56.2" y="93.3">13-5</text>
+<rect x="36.2" y="68.3" width="40" height="18" rx="9" style="fill:var(--gbar)"/><text class="badge" x="56.2" y="77.3" style="fill:#222">昇段</text>
+<rect x="72.2" y="133.3" width="24" height="116.7" style="fill:var(--pbar)"/>
+<text class="n" x="84.2" y="128.3">10-8</text>
+<text class="n" x="70.2" y="268">59</text><text class="sm" x="70.2" y="284">16前</text>
+<rect x="106.8" y="180.0" width="28" height="70.0" style="fill:var(--pbar)"/>
+<text class="n" x="120.8" y="175.0">6-12</text>
+<text class="n" x="120.8" y="268">60</text><text class="sm" x="120.8" y="284">16後</text>
+<rect x="157.2" y="145.0" width="28" height="105.0" style="fill:var(--pbar)"/>
+<text class="n" x="171.2" y="140.0">9-9</text>
+<text class="n" x="171.2" y="268">61</text><text class="sm" x="171.2" y="284">17前</text>
+<rect x="207.8" y="168.3" width="28" height="81.7" style="fill:var(--pbar)"/>
+<text class="n" x="221.8" y="163.3">7-11</text>
+<text class="n" x="221.8" y="268">62</text><text class="sm" x="221.8" y="284">17後</text>
+<rect x="258.2" y="121.7" width="28" height="128.3" style="fill:var(--pbar)"/>
+<text class="n" x="272.2" y="116.7">11-7</text>
+<text class="n" x="272.2" y="268">63</text><text class="sm" x="272.2" y="284">18前</text>
+<rect x="308.8" y="191.7" width="28" height="58.3" style="fill:var(--pbar)"/>
+<text class="n" x="322.8" y="186.7">5-13</text>
+<text class="n" x="322.8" y="268">64</text><text class="sm" x="322.8" y="284">18後</text>
+<rect x="359.2" y="168.3" width="28" height="81.7" style="fill:var(--pbar)"/>
+<text class="n" x="373.2" y="163.3">7-11</text>
+<text class="n" x="373.2" y="268">65</text><text class="sm" x="373.2" y="284">19前</text>
+<rect x="409.8" y="86.7" width="28" height="163.3" style="fill:var(--pbar)" stroke="var(--fg)" stroke-width="2"/>
+<text class="n" x="423.8" y="81.7">14-4</text>
+<rect x="403.8" y="56.7" width="40" height="18" rx="9" style="fill:var(--pbar)"/><text class="badge" x="423.8" y="65.7" style="fill:#222">次点</text>
+<text class="n" x="423.8" y="268">66</text><text class="sm" x="423.8" y="284">19後</text>
+<rect x="460.2" y="168.3" width="28" height="81.7" style="fill:var(--pbar)"/>
+<text class="n" x="474.2" y="163.3">7-11</text>
+<text class="n" x="474.2" y="268">67</text><text class="sm" x="474.2" y="284">20前</text>
+<rect x="510.8" y="145.0" width="28" height="105.0" style="fill:var(--pbar)"/>
+<text class="n" x="524.8" y="140.0">9-9</text>
+<text class="n" x="524.8" y="268">68</text><text class="sm" x="524.8" y="284">20後</text>
+<text class="note" x="12" y="318">棒の上の数字は勝-敗。点線は9勝（勝ち越しライン）。藤井は第59回のみ在籍。</text>
+</svg>
+</main>
 </body>
 </html>
