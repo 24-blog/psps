@@ -1,7 +1,7 @@
 [![License](https://img.shields.io/github/license/24-blog/psps)](LICENSE)
 
 
-###階層図
+### 階層図
 https://24-blog.github.io/psps/hierarchy
 
 
