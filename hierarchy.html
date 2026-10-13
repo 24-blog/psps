@@ -8,19 +8,19 @@
   :root {
     --bg: #ffffff; --fg: #222; --line: #555;
     --meijin: #f6d56b; --a: #fbe7b0; --b1: #d3e6cf; --b2: #a8cf9f;
-    --c1: #c3d4f3; --c2: #8fb8e3; --box: #ffffff;
+    --c1: #c3d4f3; --c2: #8fb8e3; --box: #ffffff; --pink: #fbd9e4;
   }
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
       --bg: #17181b; --fg: #eaeaea; --line: #9a9a9a;
       --meijin: #8a6d1c; --a: #8c7436; --b1: #4c6b49; --b2: #3f7a3a;
-      --c1: #3c5688; --c2: #2f679c; --box: #202226;
+      --c1: #3c5688; --c2: #2f679c; --box: #202226; --pink: #7a3a52;
     }
   }
   :root[data-theme="dark"] {
     --bg: #17181b; --fg: #eaeaea; --line: #9a9a9a;
     --meijin: #8a6d1c; --a: #8c7436; --b1: #4c6b49; --b2: #3f7a3a;
-    --c1: #3c5688; --c2: #2f679c; --box: #202226;
+    --c1: #3c5688; --c2: #2f679c; --box: #202226; --pink: #7a3a52;
   }
   html, body { height: 100%; margin: 0; }
   body {
@@ -37,7 +37,7 @@
 </style>
 </head>
 <body>
-<svg viewBox="0 0 520 620" role="img" aria-label="棋士制度の階層図">
+<svg viewBox="-45 0 565 620" role="img" aria-label="棋士制度の階層図">
   <defs>
     <marker id="ah" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
       <path d="M0,0 L10,5 L0,10 z" fill="var(--line)"/>
@@ -65,7 +65,7 @@
   <text class="t" x="260" y="441">フリークラス</text>
   <rect class="shape" x="50" y="480" width="420" height="58" style="fill:var(--box)"/>
   <text class="t" x="260" y="509">奨励会: 三段〜6級</text>
-  <rect class="shape" x="50" y="548" width="420" height="58" style="fill:var(--box)"/>
+  <rect class="shape" x="50" y="548" width="420" height="58" style="fill:var(--pink)"/>
   <text class="t" x="260" y="577">女流: 女性限定枠</text>
 
   <!-- 左：順位戦 -->
@@ -75,6 +75,10 @@
   <!-- 右：プロ棋士 -->
   <line class="arrow" x1="482" y1="470" x2="482" y2="75" marker-end="url(#ah)"/>
   <text class="side" x="504" y="272">プロ棋士</text>
+
+  <!-- 女流 → フリークラス（編入） -->
+  <path class="arrow" d="M50,577 C-40,577 -40,441 48,441" stroke-dasharray="6 5" marker-end="url(#ah)"/>
+  <text class="side" x="-30" y="509" style="font-size:18px;letter-spacing:.1em">編入</text>
 </svg>
 </body>
 </html>
