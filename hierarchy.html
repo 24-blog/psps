@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>棋士制度：階層図</title>
+<style>
+  :root {
+    --bg: #ffffff; --fg: #222; --line: #555;
+    --meijin: #f6d56b; --a: #fbe7b0; --b1: #d3e6cf; --b2: #a8cf9f;
+    --c1: #c3d4f3; --c2: #8fb8e3; --box: #ffffff;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #17181b; --fg: #eaeaea; --line: #9a9a9a;
+      --meijin: #8a6d1c; --a: #8c7436; --b1: #4c6b49; --b2: #3f7a3a;
+      --c1: #3c5688; --c2: #2f679c; --box: #202226;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #17181b; --fg: #eaeaea; --line: #9a9a9a;
+    --meijin: #8a6d1c; --a: #8c7436; --b1: #4c6b49; --b2: #3f7a3a;
+    --c1: #3c5688; --c2: #2f679c; --box: #202226;
+  }
+  html, body { height: 100%; margin: 0; }
+  body {
+    background: var(--bg); color: var(--fg);
+    font-family: "Hiragino Sans", "Yu Gothic", "Noto Sans JP", sans-serif;
+    display: flex; justify-content: center; align-items: flex-start;
+    box-sizing: border-box; padding: 16px;
+  }
+  svg { width: 100%; max-width: 520px; height: auto; }
+  .t { fill: var(--fg); font-size: 22px; text-anchor: middle; dominant-baseline: central; }
+  .side { fill: var(--fg); font-size: 22px; writing-mode: vertical-rl; text-anchor: middle; dominant-baseline: central; letter-spacing: .15em; }
+  .shape { stroke: var(--line); stroke-width: 1; }
+  .arrow { stroke: var(--line); stroke-width: 1.5; fill: none; }
+</style>
+</head>
+<body>
+<svg viewBox="0 0 520 620" role="img" aria-label="棋士制度の階層図">
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="var(--line)"/>
+    </marker>
+  </defs>
+
+  <!-- 名人 -->
+  <rect class="shape" x="125" y="10" width="270" height="42" style="fill:var(--meijin)"/>
+  <text class="t" x="260" y="31">名人：藤井聡太</text>
+
+  <!-- ピラミッド（頂点 260,62 / 底辺 58–462） -->
+  <polygon class="shape" style="fill:var(--a)"  points="260,62 308.7,144 211.3,144"/>
+  <polygon class="shape" style="fill:var(--b1)" points="211.3,144 308.7,144 344.9,205 175.1,205"/>
+  <polygon class="shape" style="fill:var(--b2)" points="175.1,205 344.9,205 383.5,270 136.5,270"/>
+  <polygon class="shape" style="fill:var(--c1)" points="136.5,270 383.5,270 422.7,336 97.3,336"/>
+  <polygon class="shape" style="fill:var(--c2)" points="97.3,336 422.7,336 462,402 58,402"/>
+  <text class="t" x="260" y="118">A</text>
+  <text class="t" x="260" y="175">B1</text>
+  <text class="t" x="260" y="238">B2</text>
+  <text class="t" x="260" y="303">C1</text>
+  <text class="t" x="260" y="369">C2</text>
+
+  <!-- 下位ボックス -->
+  <rect class="shape" x="50" y="412" width="420" height="58" style="fill:var(--box)"/>
+  <text class="t" x="260" y="441">フリークラス</text>
+  <rect class="shape" x="50" y="480" width="420" height="58" style="fill:var(--box)"/>
+  <text class="t" x="260" y="509">奨励会：三段〜6級</text>
+  <rect class="shape" x="50" y="548" width="420" height="58" style="fill:var(--box)"/>
+  <text class="t" x="260" y="577">女流</text>
+
+  <!-- 左：順位戦 -->
+  <line class="arrow" x1="38" y1="395" x2="38" y2="75" marker-end="url(#ah)"/>
+  <text class="side" x="16" y="235">順位戦</text>
+
+  <!-- 右：プロ棋士 -->
+  <line class="arrow" x1="482" y1="470" x2="482" y2="75" marker-end="url(#ah)"/>
+  <text class="side" x="504" y="272">プロ棋士</text>
+</svg>
+</body>
+</html>
