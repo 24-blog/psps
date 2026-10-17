@@ -1,4 +1,4 @@
-[![License](https://img.shields.io/github/license/24-blog/psps)](LICENSE)
+[![License](https://img.shields.io/badge/license-MIT-greeeen)](LICENSE)
 
 
 階層図<br>
