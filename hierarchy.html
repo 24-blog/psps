@@ -41,11 +41,16 @@
   .side { fill: var(--fg); font-size: 22px; writing-mode: vertical-rl; text-anchor: middle; dominant-baseline: central; letter-spacing: .15em; }
   .shape { stroke: var(--line); stroke-width: 1; }
   .arrow { stroke: var(--line); stroke-width: 1.5; fill: none; }
+  .rh { fill: var(--fg); font-size: 16px; font-weight: 700; dominant-baseline: central; }
+  .rhs { fill: var(--fg); font-size: 11px; opacity: .85; dominant-baseline: central; }
+  .rc { fill: var(--fg); font-size: 13px; text-anchor: middle; dominant-baseline: central; }
+  .rcb { fill: var(--fg); font-size: 15px; font-weight: 700; text-anchor: middle; dominant-baseline: central; }
+  .rv { fill: var(--fg); font-size: 22px; font-weight: 700; text-anchor: middle; dominant-baseline: central; }
 </style>
 </head>
 <body>
 <main>
-<svg viewBox="-45 0 565 620" role="img" aria-label="棋士制度の階層図">
+<svg viewBox="-45 0 565 800" role="img" aria-label="棋士制度の階層図">
   <defs>
     <marker id="ah" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
       <path d="M0,0 L10,5 L0,10 z" fill="var(--line)"/>
@@ -87,6 +92,29 @@
   <!-- 女流 → フリークラス（編入） -->
   <path class="arrow" d="M50,577 C-40,577 -40,441 48,441" stroke-dasharray="6 5" marker-end="url(#ah)"/>
   <text class="side" x="-30" y="509" style="font-size:14px;letter-spacing:.1em">編入 (女流棋士の地位を維持)</text>
+
+  <!-- 奨励会規定（女流の補足） -->
+  <polygon points="248,620 272,620 260,607" style="fill:var(--pbar)"/>
+  <rect x="50" y="620" width="420" height="164" rx="6" style="fill:var(--box);stroke:var(--pbar);stroke-width:2.5"/>
+  <path d="M50,626 a6,6 0 0 1 6,-6 h408 a6,6 0 0 1 6,6 v18 h-420 z" style="fill:var(--pbar)"/>
+  <text class="rh" x="62" y="634">奨励会規定</text>
+  <text class="rhs" x="140" y="635">（女性会員が退会し、女流棋士を希望する場合）</text>
+
+  <rect x="62" y="660" width="150" height="50" rx="4" style="fill:var(--pink);stroke:var(--pbar);stroke-width:1"/>
+  <text class="rcb" x="137" y="677">奨励会1級以上</text>
+  <text class="rc" x="137" y="696">で退会</text>
+  <line class="arrow" x1="216" y1="685" x2="248" y2="685" style="stroke:var(--pbar);stroke-width:2.5" marker-end="url(#ah)"/>
+  <rect x="254" y="660" width="204" height="50" rx="4" style="fill:var(--box);stroke:var(--pbar);stroke-width:2"/>
+  <text class="rcb" x="356" y="677">退会時の段級位のまま</text>
+  <text class="rc" x="356" y="696">女流棋士の資格を得る</text>
+
+  <rect x="62" y="722" width="150" height="50" rx="4" style="fill:var(--pink);stroke:var(--pbar);stroke-width:1"/>
+  <text class="rcb" x="137" y="739">奨励会6級〜2級</text>
+  <text class="rc" x="137" y="758">で退会</text>
+  <line class="arrow" x1="216" y1="747" x2="248" y2="747" style="stroke:var(--pbar);stroke-width:2.5" marker-end="url(#ah)"/>
+  <rect x="254" y="722" width="204" height="50" rx="4" style="fill:var(--box);stroke:var(--pbar);stroke-width:2"/>
+  <text class="rv" x="326" y="747">女流2級</text>
+  <text class="rc" x="410" y="747">の資格を得る</text>
 </svg>
 <svg class="sec" viewBox="0 0 565 340" role="img" aria-label="三段リーグ成績：勝数の推移">
 <text class="ct" x="12" y="24">三段リーグ成績（勝数／18局）</text>
