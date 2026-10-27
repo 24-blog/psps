@@ -7,6 +7,7 @@ https://24-blog.github.io/psps/hierarchy
 制度の社会的妥当性ダイヤグラム<br>
 https://24-blog.github.io/psps/two-octants.svg
 
+<img src="https://24-blog.github.io/psps/two-octants.svg" width="380" alt="">
 
 ⚠️COPYRIGHT<br>
 All non-code text authored by the repository owner is licensed under CC BY-NC-ND 4.0.
