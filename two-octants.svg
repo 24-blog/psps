@@ -27,7 +27,7 @@ text{font-family:"Hiragino Sans","Yu Gothic","Noto Sans JP",sans-serif}
 }
 </style>
 
-<text class="th" x="40" y="30">事後が適正(事後○)</text>
+<text class="th" x="40" y="30">A.事後が適正(事後○)</text>
 <g>
 <path class="solid" d="M90 110 L200 110 L200 220 L90 220 Z"/>
 <path class="solid" d="M140 65 L250 65 L250 175"/>
@@ -54,7 +54,7 @@ text{font-family:"Hiragino Sans","Yu Gothic","Noto Sans JP",sans-serif}
 <text class="ts" x="238" y="208" dominant-baseline="central">目的 ↗</text>
 </g>
 
-<text class="th" x="40" y="290">事後が不適正(事後×)</text>
+<text class="th" x="40" y="290">B.事後が不適正(事後×)</text>
 <g transform="translate(0,260)">
 <path class="solid" d="M90 110 L200 110 L200 220 L90 220 Z"/>
 <path class="solid" d="M140 65 L250 65 L250 175"/>
