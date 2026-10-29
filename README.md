@@ -23,6 +23,8 @@ https://24-blog.github.io/psps/hierarchy
 ### 民主的統制の円環図
 <img src="https://24-blog.github.io/psps/democratic-control-cycle.svg" width="380" alt="">
 
+前提: 法律上、公益法人は行政庁 (内閣総理大臣または都道府県知事) の監督を受ける
+
 
 ⚠️COPYRIGHT<br>
 All non-code text authored by the repository owner is licensed under CC BY-NC-ND 4.0.
