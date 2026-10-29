@@ -18,7 +18,7 @@ https://24-blog.github.io/psps/hierarchy
 前提: 将棋連盟は非営利の公益法人
 
 ### 民主的統制サイクル
-<img src="democratic-control-cycle.svg" width="380" alt="">
+<img src="https://24-blog.github.io/psps/democratic-control-cycle.svg" width="380" alt="">
 
 
 ⚠️COPYRIGHT<br>
