@@ -21,6 +21,9 @@ https://24-blog.github.io/psps/hierarchy
 前提: 将棋連盟は非営利の公益法人
 
 ### 民主的統制の円環図
+日本国憲法第14条</br>
+すべて国民は、法の下に平等であつて、人種、信条、性別、社会的身分又は門地により、政治的、経済的又は社会的関係において、差別されない。
+
 <img src="https://24-blog.github.io/psps/democratic-control-cycle.svg" width="380" alt="">
 
 前提: 法律上、公益法人は行政庁 (内閣総理大臣または都道府県知事) の監督を受ける
