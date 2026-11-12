@@ -8,7 +8,7 @@ https://24-blog.github.io/psps/
 https://24-blog.github.io/psps/hierarchy
 
 ### 制度の社会的妥当性ダイヤグラム
-<img src="https://24-blog.github.io/psps/two-octants.svg" width="380" alt="">
+<img src="https://24-blog.github.io/psps/two-octants.svg" width="360" alt="">
 
 将棋連盟の対応評価
 | 項目 | 評価 | コメント |
@@ -25,7 +25,7 @@ https://24-blog.github.io/psps/hierarchy
 | :--- |
 | すべて国民は、法の下に平等であつて、人種、信条、性別、社会的身分又は門地により、政治的、経済的又は社会的関係において、差別されない。 |
 
-<img src="https://24-blog.github.io/psps/democratic-control-cycle.svg" width="380" alt="">
+<img src="https://24-blog.github.io/psps/democratic-control-cycle.svg" width="360" alt="">
 
 前提: 法律上、公益法人は行政庁 (内閣総理大臣または都道府県知事) の監督を受ける
 
