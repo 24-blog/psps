@@ -8,7 +8,7 @@ https://24-blog.github.io/psps/
 https://24-blog.github.io/psps/hierarchy
 
 ### 制度の社会的妥当性ダイヤグラム
-<img src="https://24-blog.github.io/psps/two-octants.svg" width="360" alt="">
+<img src="https://24-blog.github.io/psps/two-octants.svg" width="380" alt="">
 
 将棋連盟の対応評価
 | 項目 | 評価 | コメント |
